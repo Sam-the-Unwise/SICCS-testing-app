@@ -1,0 +1,27 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle new-app@1.0.0~prestart: new-app@1.0.0
+6 silly lifecycle new-app@1.0.0~prestart: no script for prestart, continuing
+7 info lifecycle new-app@1.0.0~start: new-app@1.0.0
+8 verbose lifecycle new-app@1.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle new-app@1.0.0~start: PATH: /usr/share/npm/bin/node-gyp-bin:/mnt/c/Users/tmian/Probot/new-app/node_modules/.bin:/mnt/c/Users/tmian/Probot/new-app/node_modules/.bin:/usr/share/npm/bin/node-gyp-bin:/mnt/c/Users/tmian/Probot/new-app/node_modules/.bin:/home/shm53/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/ProgramData/Boxstarter:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath_target_6373187:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files (x86)/GtkSharp/2.12/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/PuTTY:/mnt/c/Program Files/swipl/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/mnt/c/Users/tmian/AppData/Local/Programs/Python/Python37/Scripts:/mnt/c/Users/tmian/AppData/Local/Programs/Python/Python37:/mnt/c/Users/tmian/AppData/Local/Programs/Python/Python36-32/Scripts:/mnt/c/Users/tmian/AppData/Local/Programs/Python/Python36-32:/mnt/c/Users/tmian/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Java/jdk1.8.0_181/bin:/mnt/c/Users/tmian/AppData/Local/atom/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA 2018.3/bin:/mnt/c/Users/tmian/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/tmian/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/tmian/AppData/Roaming/npm:/mnt/c/Program Files/heroku/bin:/snap/bin
+10 verbose lifecycle new-app@1.0.0~start: CWD: /mnt/c/Users/tmian/Probot/new-app
+11 silly lifecycle new-app@1.0.0~start: Args: [ '-c', 'probot run ./index.js' ]
+12 verbose stack Error: write EIO
+12 verbose stack     at _errnoException (util.js:1022:11)
+12 verbose stack     at WriteWrap.afterWrite [as oncomplete] (net.js:880:14)
+13 verbose cwd /mnt/c/Users/tmian/Probot/new-app
+14 error Linux 4.4.0-17134-Microsoft
+15 error argv "/usr/bin/node" "/usr/bin/npm" "start"
+16 error node v8.10.0
+17 error npm  v3.5.2
+18 error code EIO
+19 error errno EIO
+20 error syscall write
+21 error write EIO
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]

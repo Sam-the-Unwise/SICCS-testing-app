@@ -1,44 +1,6 @@
-var dateJS = require('./other');
-const onMention = require('probot-on-mention')
+const github = require('@octokit/rest')
 
-//////// ATTEMPTING TO PULL ALL PULL REQUESTS AND ISSUES \\\\\\\\\
-
-module.exports = app => {
-    app.on('issue_comment.opened', async context => {
-       console.log(context.payload)
-    })
-  }
-
-// module.exports = robot => {
-
-//   robot.on('*', async context => {
-//     console.log(context.github.issues.list())
-//   })
-  
-// }
-
-// module.exports = app => {
-//   app.on('pull_request_review', async context => {
-//     context.log(context.payload)
-//   })
-// }
-
-
-
-
-/////////// ATTEMPTING TO GET A COMMENT \\\\\\\\\\\\
-
-// module.exports = robot => {
-
-//   const comment = context.github.issues.getComment({
-//     owner,
-//     repo,
-//     comment_id
-//   });
-
-//   robot.log(comment);
-// }
-
+// use context.payload to see all the information
 
 
 
@@ -52,24 +14,58 @@ const addComment = `
 `
 
 
-//////////////////////// COMMENT RESPONSE \\\\\\\\\\\\\\\\\\\\\\
 
-module.exports = robot => {
+module.exports = app => {
 
-  robot.on('issue_comment.created', context => {
-  
-    context.github.query(addComment, {
-      id: context.payload.issue.node_id,
-      body: 'Comment created'
-    });
+  var comment = ''
 
-    robot.log(context);
+  app.on('issue_comment.created', context => {
+
+    // log the contents of the comment
+    //context.log(context.payload);
+
+    //siccs-testing-app[bot]
+
+    // get username of commenter
+    //context.log(context.payload.comment.user.login)
+
+    if(context.payload.comment.user.login != ("siccs-testing-app[bot]"))
+    {
+      
+      if(context.payload.comment.body.includes("@siccs-testing-app"))
+      {
+        if(context.payload.comment.body.includes("Hello"))
+        {
+          comment += "Hello"
+        }
+
+        if(context.payload.comment.body.includes("?"))
+        {
+          comment += ' I see that you are asking a question'
+        }
+        
+        context.github.query(addComment, {
+            id: context.payload.issue.node_id,
+            body: comment
+        });
+      }
+    }
+  });
     
+
+    // will log the contents of the comment
+    //context.log(context.payload.comment.body);
+
+  app.on('pull-request.opened', context => {
+    context.log("OPENED");
   })
 }
 
 
-//////////////////////// REOPEN, EDIT \\\\\\\\\\\\\\\\\\\\\\\\\
+// PULL REQUESTS
+
+
+// //////////////////////// REOPEN, EDIT \\\\\\\\\\\\\\\\\\\\\\\\\
 
 module.exports = robot => {
 

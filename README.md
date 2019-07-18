@@ -1,6 +1,6 @@
-# new-app
+# siccs-testing-app
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that A Probot app
+> A GitHub App built with [Probot](https://github.com/probot/probot) that currently is programmed to respond to opened, edited, and reopened issues as well as comments that call the bot
 
 ## Setup
 
